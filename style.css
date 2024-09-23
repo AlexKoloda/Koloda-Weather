@@ -142,6 +142,7 @@ body {
     font-weight: bold;
     top: -25px;
     left: 30px;
+    cursor: pointer;
 }
 
 /* Смена фона по времени суток  */
