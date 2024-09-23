@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Погода</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="blur-layer">
+        <div class="wheather-container">
+            <input type="search" autocomplete="off" class="wheather-input-location" id="search-box"
+                placeholder="Search for your city...">
+            <p class="wheather-container-date">date</p>
+            <h1 class="weather-container-temperature">C°</h1>
+            <p class="wheather-container-location">City Name</p>
+        </div>
+        <div class="detailed-weather-container">
+            <p class="close-wather-container">Details</p>
+            <p class="detailed-weather-sky">sky</p>
+            <p class="detailed-weather-min-max">min/max </p>
+            <p class="detailed-weather-wind">wind</p>
+        </div>
+
+    </div>
+</body>
+<script src="./date.js"></script>
+<script src="./wheather.js"></script>
+
+</html>
