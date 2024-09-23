@@ -4,7 +4,7 @@ let background = document.querySelector('.blur-layer');
 
 let morning = (today.getHours() <= 12 && today.getHours() >= 8);
 let afternoon = (today.getHours() <= 18 && today.getHours() >= 12);
-let evning = (today.getHours() <= 0 && today.getHours() >= 18);
+let evning = (today.getHours() <= 23 && today.getHours() >= 18);
 let night = (today.getHours() <= 8 && today.getHours() >= 0);
 
 date.innerHTML = today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear();
