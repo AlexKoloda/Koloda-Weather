@@ -1,5 +1,5 @@
 body {
-    background-image: url('./Background-image.jpg');
+    background-image: url('/Background-image.jpg');
     backdrop-filter: blur(3px);
     font-family: "Yeseva One", serif;
     font-weight: 400;
