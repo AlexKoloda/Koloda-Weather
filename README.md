@@ -1,5 +1,5 @@
 # Weather App
-Create weather app on HTML, CSS, JavaScript
+Create weather app on HTML, CSS, JavaScript. /n
 Change a day time background
 
 https://alexkoloda.github.io/Koloda-Weather/ Click and start use now!
