@@ -1,24 +1,40 @@
-let today = new Date();
-let date = document.querySelector('.wheather-container-date');
-let background = document.querySelector('.blur-layer');
+const today = new Date();
+const date = document.querySelector(".weather-container-date");
+const background = document.querySelector(".blur-layer");
 
-let morning = (today.getHours() <= 12 && today.getHours() >= 8);
-let afternoon = (today.getHours() <= 18 && today.getHours() >= 12);
-let evning = (today.getHours() <= 23 && today.getHours() >= 18);
-let night = (today.getHours() <= 8 && today.getHours() >= 0);
+if (!background) {
+  console.error("Элемент не найден");
+} else {
+  const hour = today.getHours();
 
-date.innerHTML = today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear();
+  const morning = hour >= 6 && hour < 12;
+  const afternoon = hour >= 12 && hour < 18;
+  const evening = hour >= 18 && hour < 24;
+  const night = hour >= 0 && hour < 6;
 
-function changeBackground() {
+  const formatNumber = (num) => {
+    return num < 10 ? "0" + num : num;
+  };
 
-    if (morning) {
-        background.classList.add('morning');
-    } else if (afternoon) {
-        background.classList.add('afternoon');
-    } else if (evning) {
-        background.classList.add('evning');
-    } else if (night) {
-        background.classList.add('night');
-    }
+  if (date) {
+    date.innerHTML = `${formatNumber(today.getDate())}.${formatNumber(
+      today.getMonth() + 1
+    )}.${today.getFullYear()}`;
+  }
+
+  const changeBackground = () => {
+    background.classList.remove("morning", "afternoon", "evening", "night");
+
+    const timeOfDay = morning
+      ? "morning"
+      : afternoon
+      ? "afternoon"
+      : evening
+      ? "evening"
+      : "night";
+
+    background.classList.add(timeOfDay);
+  };
+
+  changeBackground();
 }
-changeBackground();
